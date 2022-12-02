@@ -13,6 +13,8 @@ html {
 body {
   background-image: url("../images/bg-intro-mobile.png");
   background-color: #ff7979;
+  display: flex;
+  justify-content: center;
 }
 
 main {
@@ -20,6 +22,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 64px;
+  max-width: 450px;
 }
 
 article {
@@ -113,6 +116,9 @@ article:first-of-type {
   background-color: #5e54a4;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
   border-radius: 10px;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0.267857px;
 }
 
 .inputcontainer {
@@ -131,6 +137,10 @@ article:first-of-type {
   border: 1px solid #dedede;
   border-radius: 5px;
   margin-top: 19px;
+}
+
+.inputcontainer:first-of-type {
+  margin-top: 0;
 }
 
 .errorborder {
@@ -156,6 +166,13 @@ article:first-of-type {
   margin-right: 3px;
 }
 
+button:hover {
+  background-color: #77e2b3;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .tandcs {
   font-weight: 500;
   font-size: 11px;
@@ -168,4 +185,52 @@ article:first-of-type {
 .errormessage,
 .erroricon {
   display: none;
+}
+
+@media (min-width: 1300px) {
+  main {
+    flex-direction: row;
+    max-width: 100%;
+    height: 100vh;
+    align-items: center;
+    gap: 45px;
+  }
+
+  article:first-of-type {
+    padding: 0;
+    width: 525px;
+    height: 220px;
+  }
+
+  article:nth-of-type(2) {
+    width: 540px;
+    height: 558px;
+  }
+
+  h1 {
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -0.520833px;
+    text-align: left;
+  }
+
+  form {
+    width: 540px;
+    height: 474px;
+  }
+
+  button, .inputcontainer {
+    
+        width: 460px;
+        height: 56px;
+      
+  }
+
+  .descriptiontext {
+    text-align: left;
+  }
+
+  .tandcs {
+    line-height: 26px;
+  }
 }
